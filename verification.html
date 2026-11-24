@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Result &amp; Certificate Verification | SVITM</title>
+  <meta name="description" content="Check semester results and verify SVITM certificates online. Enter your roll number or certificate ID to see an instant demo verification result.">
+  <link rel="icon" href="assets/img/favicon.svg">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/utility-pages.css">
+</head>
+<body data-page="verification">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span class="sep" aria-hidden="true">/</span><span aria-current="page">Result &amp; Verification</span>
+        </nav>
+        <p class="eyebrow eyebrow--light mt-3">Student services</p>
+        <h1>Results and certificates. Verified in seconds.</h1>
+        <p class="lead">Check your semester result or verify a certificate issued by SVITM. Employers and centres can confirm a qualification without a phone call.</p>
+        <div class="hero-chip-row">
+          <span class="chip chip--dark"><svg class="icon" aria-hidden="true"><use href="#i-shield-check"></use></svg> Secure lookup</span>
+          <span class="chip chip--dark"><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg> Instant response</span>
+          <span class="chip chip--dark"><svg class="icon" aria-hidden="true"><use href="#i-file-text"></use></svg> Demo interface</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="verify">
+      <div class="container">
+        <div class="verify-layout">
+          <div class="verify-main">
+            <div class="verify-card">
+              <div class="verify-tabs" role="tablist" aria-label="Verification services">
+                <button class="verify-tab is-active" id="tab-result" type="button" role="tab" aria-selected="true" aria-controls="panel-result" data-tab="result">
+                  <svg class="icon" aria-hidden="true"><use href="#i-file-text"></use></svg> Check result
+                </button>
+                <button class="verify-tab" id="tab-cert" type="button" role="tab" aria-selected="false" aria-controls="panel-cert" data-tab="cert" tabindex="-1">
+                  <svg class="icon" aria-hidden="true"><use href="#i-badge-check"></use></svg> Verify certificate
+                </button>
+              </div>
+
+              <div class="verify-panel" id="panel-result" role="tabpanel" aria-labelledby="tab-result" data-panel="result">
+                <div class="verify-head">
+                  <h2>Check your semester result</h2>
+                  <p>Enter your roll number and date of birth. Results are published within 21 days of the last exam.</p>
+                </div>
+                <form class="form-grid verify-form" id="resultForm" novalidate>
+                  <div class="field">
+                    <label class="label" for="rollNo">Roll number <span aria-hidden="true">*</span></label>
+                    <input class="input" id="rollNo" name="rollNo" type="text" placeholder="SV2023CSE014" autocomplete="off" required>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="resProgramme">Programme <span aria-hidden="true">*</span></label>
+                    <select class="select" id="resProgramme" name="programme" required>
+                      <option>B.Tech — Computer Science &amp; Engineering</option>
+                      <option>MBA</option>
+                      <option>BBA</option>
+                      <option>BCA</option>
+                      <option>B.Sc. — Medical Laboratory Technology</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="resSemester">Semester <span aria-hidden="true">*</span></label>
+                    <select class="select" id="resSemester" name="semester" required>
+                      <option>Semester 5</option>
+                      <option>Semester 4</option>
+                      <option>Semester 3</option>
+                      <option>Semester 2</option>
+                      <option>Semester 1</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="resDob">Date of birth <span aria-hidden="true">*</span></label>
+                    <input class="input" id="resDob" name="dob" type="date" required>
+                  </div>
+                  <div class="field field--full">
+                    <button class="btn btn--primary" type="submit" id="resultSubmit">
+                      Check result <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+                    </button>
+                  </div>
+                </form>
+
+                <div class="verify-result" id="resultOutput" hidden>
+                  <div class="result-head">
+                    <div class="person">
+                      <span class="avatar avatar--lg avatar--initials">AS</span>
+                      <div><strong>Aarav Sharma</strong><span>SV2023CSE014 · B.Tech CSE</span></div>
+                    </div>
+                    <span class="chip chip--green"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> PASS</span>
+                  </div>
+                  <div class="result-summary">
+                    <div><small>Semester</small><strong>5</strong></div>
+                    <div><small>SGPA</small><strong>8.6</strong></div>
+                    <div><small>Credits</small><strong>22 / 24</strong></div>
+                    <div><small>Result date</small><strong>18 Aug 2026</strong></div>
+                  </div>
+                  <div class="table-wrap result-table-wrap">
+                    <table class="table">
+                      <caption class="sr-only">Semester 5 subject-wise result</caption>
+                      <thead><tr><th scope="col">Subject</th><th scope="col">Credits</th><th scope="col">Grade</th><th scope="col">Status</th></tr></thead>
+                      <tbody>
+                        <tr><td class="cell-strong">Operating Systems</td><td>4</td><td>A</td><td><span class="chip chip--green">Pass</span></td></tr>
+                        <tr><td class="cell-strong">Computer Networks</td><td>4</td><td>A+</td><td><span class="chip chip--green">Pass</span></td></tr>
+                        <tr><td class="cell-strong">Database Management</td><td>4</td><td>O</td><td><span class="chip chip--green">Pass</span></td></tr>
+                        <tr><td class="cell-strong">Software Engineering</td><td>3</td><td>A</td><td><span class="chip chip--green">Pass</span></td></tr>
+                        <tr><td class="cell-strong">AI &amp; Machine Learning</td><td>4</td><td>A+</td><td><span class="chip chip--green">Pass</span></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p class="demo-flag"><svg class="icon" aria-hidden="true"><use href="#i-alert-circle"></use></svg> Demo result. No live student record was queried.</p>
+                  <div class="result-actions">
+                    <button class="btn btn--outline btn--sm" type="button" data-demo-action="Printing is disabled in this demo."><svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg> Download marksheet</button>
+                    <a class="btn btn--ghost btn--sm" href="#help">Something wrong?</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="verify-panel" id="panel-cert" role="tabpanel" aria-labelledby="tab-cert" data-panel="cert" hidden>
+                <div class="verify-head">
+                  <h2>Verify a certificate</h2>
+                  <p>Every SVITM certificate carries a unique ID. Enter it to confirm the holder, programme and validity.</p>
+                </div>
+                <form class="form-grid verify-form" id="certForm" novalidate>
+                  <div class="field field--full">
+                    <label class="label" for="certNo">Certificate number <span aria-hidden="true">*</span></label>
+                    <input class="input" id="certNo" name="certNo" type="text" placeholder="SVITM-CERT-2025-04187" autocomplete="off" required>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="certName">Candidate name <span class="ad-optional">(optional)</span></label>
+                    <input class="input" id="certName" name="name" type="text" placeholder="As printed on the certificate" autocomplete="off">
+                  </div>
+                  <div class="field">
+                    <label class="label" for="certType">Certificate type <span aria-hidden="true">*</span></label>
+                    <select class="select" id="certType" name="type" required>
+                      <option>Degree completion</option>
+                      <option>Diploma</option>
+                      <option>Skill certificate</option>
+                      <option>Provisional certificate</option>
+                    </select>
+                  </div>
+                  <div class="field field--full">
+                    <button class="btn btn--primary" type="submit" id="certSubmit">
+                      Verify certificate <svg class="icon" aria-hidden="true"><use href="#i-shield-check"></use></svg>
+                    </button>
+                  </div>
+                </form>
+
+                <div class="verify-result verify-result--cert" id="certOutput" hidden>
+                  <div class="verified-banner">
+                    <span class="verified-icon"><svg class="icon" aria-hidden="true"><use href="#i-badge-check"></use></svg></span>
+                    <div><strong>Certificate verified</strong><p>This certificate was issued by SVITM and is currently valid.</p></div>
+                    <span class="chip chip--green">Valid &amp; active</span>
+                  </div>
+                  <dl class="cert-grid">
+                    <div><dt>Certificate ID</dt><dd>SVITM-CERT-2025-04187</dd></div>
+                    <div><dt>Holder</dt><dd>Aarav Sharma</dd></div>
+                    <div><dt>Programme</dt><dd>B.Tech — Computer Science &amp; Engineering</dd></div>
+                    <div><dt>Issued on</dt><dd>12 June 2025</dd></div>
+                    <div><dt>Grade</dt><dd>First division · 78.4%</dd></div>
+                    <div><dt>Status</dt><dd><span class="chip chip--green">Valid &amp; active</span></dd></div>
+                  </dl>
+                  <p class="demo-flag"><svg class="icon" aria-hidden="true"><use href="#i-alert-circle"></use></svg> Demo verification. No live certificate database was queried.</p>
+                  <div class="result-actions">
+                    <button class="btn btn--outline btn--sm" type="button" data-demo-action="Verification PDF download is disabled in this demo."><svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg> Download verification</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="verify-side">
+            <div class="side-card">
+              <h3>How it works</h3>
+              <ol class="num-list mt-2">
+                <li><strong>Enter your details</strong><p>Roll number and date of birth, or your certificate ID.</p></li>
+                <li><strong>We match the record</strong><p>The system checks the programme, semester and status.</p></li>
+                <li><strong>Get a clear result</strong><p>Subject grades or a verified certificate summary.</p></li>
+              </ol>
+            </div>
+            <div class="side-card side-card--dark" id="help">
+              <span class="icon-box icon-box--soft"><svg class="icon" aria-hidden="true"><use href="#i-circle-help"></use></svg></span>
+              <h3>Need help?</h3>
+              <p>Examination cell, Monday to Saturday, 9 am – 5 pm.</p>
+              <div class="side-links">
+                <a href="tel:+919315500924"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg> +91 93155 00924</a>
+                <a href="mailto:exams@svivekananditm.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg> exams@svivekananditm.com</a>
+                <a href="contact.html"><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg> Raise an enquiry</a>
+              </div>
+            </div>
+            <div class="side-card side-card--soft">
+              <span class="icon-box icon-box--sm"><svg class="icon" aria-hidden="true"><use href="#i-shield-check"></use></svg></span>
+              <h3>About this demo</h3>
+              <p>These forms are a UI demonstration. Nothing is sent to a server, and no real student or certificate data is stored.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-cream">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">For employers</p>
+            <h2 class="section-title">Hiring? Verify in <em>one step.</em></h2>
+            <p class="section-lead mt-2">No account, no email trail. Ask the candidate for their certificate ID and confirm it here.</p>
+          </div>
+          <a class="btn btn--primary" href="#verify" data-tab-jump="cert">Verify a certificate <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+        </div>
+        <div class="grid grid--3">
+          <div class="feature"><span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-badge-check"></use></svg></span><h3>Unique certificate IDs</h3><p>Every certificate has an ID tied to the holder, programme and issue date.</p></div>
+          <div class="feature"><span class="icon-box icon-box--saffron"><svg class="icon" aria-hidden="true"><use href="#i-shield-check"></use></svg></span><h3>Tamper-evident</h3><p>Status flags show whether a certificate is valid, replaced or withdrawn.</p></div>
+          <div class="feature"><span class="icon-box icon-box--green"><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg></span><h3>Instant response</h3><p>No phone calls or waiting for an email — verification is immediate.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container faq-split">
+        <div>
+          <p class="eyebrow">Verification FAQ</p>
+          <h2 class="section-title">Common <em>questions.</em></h2>
+        </div>
+        <div class="accordion">
+          <details open>
+            <summary>My result is not showing. What should I do? <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg></summary>
+            <div class="accordion-body"><p>Check the roll number, programme and semester combination. Results appear within 21 days of the last exam. If a subject is marked pending, contact the examination cell with your admit card.</p></div>
+          </details>
+          <details>
+            <summary>Can I download a marksheet? <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg></summary>
+            <div class="accordion-body"><p>In the live portal, a provisional marksheet can be downloaded once results are published. Official transcripts are issued by the examination cell after a written request and fee payment.</p></div>
+          </details>
+          <details>
+            <summary>What if a certificate shows as withdrawn? <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg></summary>
+            <div class="accordion-body"><p>A withdrawn status means the certificate was replaced, corrected or cancelled. Ask the holder for the replacement certificate ID, or contact the examination cell to confirm the current record.</p></div>
+          </details>
+          <details>
+            <summary>Can employers verify without the candidate present? <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg></summary>
+            <div class="accordion-body"><p>Yes. The certificate ID is enough to confirm the holder's name, programme, grade and validity. No personal contact details are shown.</p></div>
+          </details>
+          <details>
+            <summary>Is there a fee for verification? <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg></summary>
+            <div class="accordion-body"><p>Online verification is free. A formal verification letter on institute letterhead, if required by an employer, may carry a small administrative fee.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--sm">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <p class="eyebrow eyebrow--light">Student services</p>
+            <h2>Need a transcript or a correction?</h2>
+            <p>The examination cell handles transcripts, name corrections and duplicate certificates. Start with an enquiry.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn--accent btn--lg" href="contact.html">Contact examination cell <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+            <a class="btn btn--ghost btn--lg" href="tel:+919315500924">Call the helpline</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script>
+    (function () {
+      var tabs = Array.prototype.slice.call(document.querySelectorAll('.verify-tab'));
+      var panels = Array.prototype.slice.call(document.querySelectorAll('.verify-panel'));
+
+      function selectTab(key, focus) {
+        tabs.forEach(function (tab) {
+          var on = tab.getAttribute('data-tab') === key;
+          tab.classList.toggle('is-active', on);
+          tab.setAttribute('aria-selected', String(on));
+          tab.setAttribute('tabindex', on ? '0' : '-1');
+          if (on && focus) tab.focus();
+        });
+        panels.forEach(function (panel) {
+          panel.hidden = panel.getAttribute('data-panel') !== key;
+        });
+      }
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () { selectTab(tab.getAttribute('data-tab')); });
+        tab.addEventListener('keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+          e.preventDefault();
+          var i = tabs.indexOf(tab);
+          var next = e.key === 'ArrowRight' ? (i + 1) % tabs.length : (i - 1 + tabs.length) % tabs.length;
+          selectTab(tabs[next].getAttribute('data-tab'), true);
+        });
+      });
+
+      document.querySelectorAll('[data-tab-jump]').forEach(function (link) {
+        link.addEventListener('click', function () {
+          selectTab(link.getAttribute('data-tab-jump'));
+        });
+      });
+
+      function simulate(button, label, done) {
+        var original = button.innerHTML;
+        button.disabled = true;
+        button.textContent = 'Checking…';
+        window.setTimeout(function () {
+          button.disabled = false;
+          button.innerHTML = original;
+          done();
+        }, 700);
+      }
+
+      var resultForm = document.getElementById('resultForm');
+      var resultOutput = document.getElementById('resultOutput');
+      if (resultForm) {
+        resultForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var required = resultForm.querySelectorAll('[required]');
+          var missing = false;
+          required.forEach(function (field) {
+            if (!field.value.trim()) { missing = true; field.reportValidity(); }
+          });
+          if (missing) return;
+          var btn = document.getElementById('resultSubmit');
+          simulate(btn, 'Check result', function () {
+            resultOutput.hidden = false;
+            resultOutput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          });
+        });
+      }
+
+      var certForm = document.getElementById('certForm');
+      var certOutput = document.getElementById('certOutput');
+      if (certForm) {
+        certForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var required = certForm.querySelectorAll('[required]');
+          var missing = false;
+          required.forEach(function (field) {
+            if (!field.value.trim()) { missing = true; field.reportValidity(); }
+          });
+          if (missing) return;
+          var btn = document.getElementById('certSubmit');
+          simulate(btn, 'Verify certificate', function () {
+            certOutput.hidden = false;
+            certOutput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
