@@ -43,6 +43,10 @@ assets/
   img/                demo photography
 ```
 
+## Live demo
+
+https://aasheesh333.github.io/svitm-demo/ — hosted on GitHub Pages from this repo (`master` branch, root). Push to `master` to update.
+
 ## Deploy
 
 Fully static — works on Vercel, Netlify, Cloudflare Pages or any static host. No build command; output directory is this folder. For Cloudflare Workers, `wrangler.jsonc` is included.
